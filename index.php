@@ -16,5 +16,7 @@
     <h2>Bem-vindo à Loja Bíblia</h2>
     <p>Encontre as melhores bíblias e livros cristãos.</p>
 
+    <a href="produtos.php">Produtos</a>
+    
 </body>
 </html>
