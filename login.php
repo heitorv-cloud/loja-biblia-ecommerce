@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+    <h1>Login</h1>
+
+    <form>
+        <label>Email:</label><br>
+        <input type="email"><br><br>
+
+        <label>Senha:</label><br>
+        <input type="password"><br><br>
+
+        <button type="submit">Entrar</button>
+    </form>
+
+</body>
+</html>
