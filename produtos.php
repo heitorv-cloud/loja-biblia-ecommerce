@@ -14,8 +14,14 @@ $stmt = $pdo->query($sql);
     <title>Produtos</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
 </head>
+
+<form method="GET">
+    <input type="text" name="busca" placeholder="Buscar produto">
+    <button type="submit">Buscar</button>
+</form>
+
 <body>
 
 <h1>Produtos</h1>
