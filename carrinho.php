@@ -3,13 +3,28 @@
 session_start();
 require "conexao.php";
 
-echo "<h1>Carrinho de Compras</h1>";
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-4">
+
+<h1>Carrinho de Compras</h1>
+
+<?php
 
 $total = 0;
 
 if (!isset($_SESSION['carrinho']) || empty($_SESSION['carrinho'])) {
 
-    echo "Carrinho vazio";
+    echo "<p>Carrinho vazio</p>";
 
 } else {
 
@@ -28,16 +43,15 @@ if (!isset($_SESSION['carrinho']) || empty($_SESSION['carrinho'])) {
 
         echo "<h3>" . $produto['nome'] . "</h3>";
 
-        echo "Preço: R$ " . $produto['preco'] . "<br>";
+        echo "<p>Preço: R$ " . $produto['preco'] . "</p>";
 
-        echo "Quantidade: " . $quantidade . "<br>";
+        echo "<p>Quantidade: " . $quantidade . "</p>";
 
-        echo "Subtotal: R$ " . number_format($subtotal, 2, ',', '.') . "<br>";
+        echo "<p>Subtotal: R$ " . number_format($subtotal, 2, ',', '.') . "</p>";
 
-        echo "<a href='remover_carrinho.php?id=".$produto['id']."'>
-Remover
-</a><br>";
-
+        echo "<a class='btn btn-danger' href='remover_carrinho.php?id=".$produto['id']."'>
+        Remover
+        </a>";
     }
 
     echo "<hr>";
@@ -48,9 +62,14 @@ Remover
 ?>
 
 <br>
-<br>
 
-<a href="checkout.php">Finalizar Compra</a>
+<a class="btn btn-success" href="checkout.php">
+    Finalizar Compra
+</a>
 
-<br><br>
-<a href="produtos.php">Voltar aos Produtos</a>
+<a class="btn btn-primary" href="produtos.php">
+    Voltar aos Produtos
+</a>
+
+</body>
+</html>
