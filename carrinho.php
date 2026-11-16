@@ -48,5 +48,9 @@ Remover
 ?>
 
 <br>
+<br>
 
+<a href="checkout.php">Finalizar Compra</a>
+
+<br><br>
 <a href="produtos.php">Voltar aos Produtos</a>
