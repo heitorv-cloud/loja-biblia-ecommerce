@@ -21,13 +21,25 @@ $stmt = $pdo->query("SELECT * FROM produtos");
 
 <?php while($produto = $stmt->fetch()) { ?>
 
-<p>
+    <p>
 
 <?php echo $produto['nome']; ?>
 
 |
 
+<a href="editar_produto.php?id=<?php echo $produto['id']; ?>">
+Editar
+</a>
+
+|
+
 R$ <?php echo $produto['preco']; ?>
+
+|
+
+<a href="excluir_produto.php?id=<?php echo $produto['id']; ?>">
+Excluir
+</a>
 
 </p>
 

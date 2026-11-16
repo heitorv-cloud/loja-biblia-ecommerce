@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,6 +10,14 @@
     <title>Loja Bíblia</title>
 </head>
 <body>
+
+<?php if(isset($_SESSION["nome"])) { ?>
+
+<h2>Bem-vindo, <?php echo $_SESSION["nome"]; ?>!</h2>
+
+<?php } ?>
+
+<a href="logout.php">Sair</a>
 
     <h1>Loja Bíblia</h1>
 

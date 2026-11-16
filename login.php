@@ -20,8 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["nome"] = $usuario["nome"];
         $_SESSION["tipo"] = $usuario["tipo"];
 
-        echo "<h2>Login realizado com sucesso!</h2>";
-
+        header("Location: index.php");
+exit;
     } else {
 
         echo "<h2>Email ou senha inválidos!</h2>";
