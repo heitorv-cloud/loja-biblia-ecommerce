@@ -15,6 +15,11 @@ session_start();
 
 <br><br>
 
+<a href="pedidos.php">Visualizar Pedidos</a>
+
+<br><br>
+
+
 <a href="../index.php">Voltar ao Site</a>
 
 </body>
